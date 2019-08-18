@@ -1,0 +1,3 @@
+include 'client', 'server'
+rootProject.name = 'vue-grails-demo'
+

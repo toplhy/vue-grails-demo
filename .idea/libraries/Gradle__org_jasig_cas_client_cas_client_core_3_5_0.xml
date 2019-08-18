@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jasig.cas.client:cas-client-core:3.5.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jasig/cas/client/cas-client-core/3.5.0/cas-client-core-3.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
