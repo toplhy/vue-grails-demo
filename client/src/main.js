@@ -9,6 +9,23 @@ import './assets/css/grails.css'
 import './assets/css/main.css'
 
 Vue.config.productionTip = false
+Vue.config.tokenKey = 'JWT-Token'
+
+// 路由拦截验证
+router.beforeEach((to, from, next) => {
+  if (to.meta.requireAuth) {
+    if (localStorage.getItem(this.tokenKey)) {
+      next()
+    } else {
+      next({
+        path: '/login',
+        query: {redirect: to.fullPath}
+      })
+    }
+  } else {
+    next()
+  }
+})
 
 Vue.use(uiv)
 /* eslint-disable no-new */

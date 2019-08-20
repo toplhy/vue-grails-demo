@@ -9,7 +9,6 @@
 <script>
 import router from '../router'
 import request from '../utils/request'
-const TokenKey = 'JWT-Token'
 
 export default {
   name: 'Login',
@@ -30,7 +29,7 @@ export default {
           data: JSON.stringify({ username: this.username, password: this.password })
         }).then(json => {
           if (json && typeof json !== 'undefined') {
-            localStorage.setItem(TokenKey, JSON.stringify(json))
+            localStorage.setItem(this.tokenKey, JSON.stringify(json))
             router.push({
               name: 'Welcome'
             })
