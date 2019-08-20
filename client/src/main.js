@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import * as uiv from 'uiv'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import './assets/css/bootstrap.css'
 import './assets/css/grails.css'
 import './assets/css/main.css'
@@ -27,7 +28,7 @@ router.beforeEach((to, from, next) => {
   }
 })
 
-Vue.use(uiv)
+Vue.use(ElementUI, { size: 'small', zIndex: 3000 })
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
